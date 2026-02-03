@@ -3,10 +3,12 @@
         xmlns:vm="using:YTsearch.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="using:YTsearch.Views"
+        xmlns:webview="clr-namespace:Avalonia.WebView.Desktop;assembly=Avalonia.WebView.Desktop"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="YTsearch.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="YTsearch">
-        <views:MainView />
+        Title="YTsearch Native">
+
+    <WebView Name="MainBrowser"/>
+
 </Window>
