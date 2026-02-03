@@ -1,4 +1,6 @@
 using Avalonia.Controls;
+using YTsearch;
+using Avalonia.Interactivity;
 using System;
 
 namespace YTsearch.Views
@@ -11,15 +13,18 @@ namespace YTsearch.Views
         {
             InitializeComponent();
 
-            // Start the local server
+            // 1. Start the C# Local Server
             _server = new LocalServer();
             _server.Start();
 
-            // Point the WebView to our local embedded site
-            // The script.js calls "/api/...", which LocalServer automatically forwards to Vercel
+            // 2. Load the embedded index.html
+            // The browser will load http://localhost:PORT/index.html
             this.Opened += (s, e) =>
             {
-                MainBrowser.Url = new Uri($"http://localhost:{_server.Port}/index.html");
+                if (MainBrowser != null)
+                {
+                    MainBrowser.Url = new Uri($"http://localhost:{_server.Port}/index.html");
+                }
             };
         }
     }

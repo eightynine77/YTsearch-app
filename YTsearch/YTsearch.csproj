@@ -11,18 +11,17 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Remove="LocalServer.cs" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <None Remove="wwwroot\css\bootstrap.min.css" />
+    <None Remove="wwwroot\index.html" />
     <None Remove="wwwroot\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot\style.css" />
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Include="LocalServer.cs" />
     <EmbeddedResource Include="wwwroot\css\bootstrap.min.css" />
+    <EmbeddedResource Include="wwwroot\index.html" />
     <EmbeddedResource Include="wwwroot\js\bootstrap.bundle.min.js" />
+    <EmbeddedResource Include="wwwroot\style.css" />
   </ItemGroup>
 
   <ItemGroup>
