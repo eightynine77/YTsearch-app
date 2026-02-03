@@ -9,6 +9,21 @@
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="LocalServer.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="wwwroot\css\bootstrap.min.css" />
+    <None Remove="wwwroot\js\bootstrap.bundle.min.js" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="LocalServer.cs" />
+    <EmbeddedResource Include="wwwroot\css\bootstrap.min.css" />
+    <EmbeddedResource Include="wwwroot\js\bootstrap.bundle.min.js" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" />
